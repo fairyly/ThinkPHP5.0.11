@@ -37,6 +37,8 @@ www  WEB部署目录（或者子目录）
 ├─public          静态资源目录
 ├─runtime         缓存目录
 └─thinkphp        框架目录
+
+修改 database.php 中数据库名，用户名和密码
 ```
 
 [![Total Downloads](https://poser.pugx.org/topthink/think/downloads)](https://packagist.org/packages/topthink/think)
