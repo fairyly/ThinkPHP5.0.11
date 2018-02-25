@@ -8,6 +8,28 @@ https://www.kancloud.cn/manual/thinkphp5/129746
 
 1.修改入口文件
 
+默认的应用入口文件位于public/index.php，内容如下：
+// 定义应用目录
+define('APP_PATH', __DIR__ . '/../application/');
+// 加载框架引导文件
+require __DIR__ . '/../thinkphp/start.php';
+入口文件位置的设计是为了让应用部署更安全，public目录为web可访问目录，其他的文件都可以放到非WEB访问目录下面。
+
+我们也可以改变入口文件的位置及内容，例如把入口文件改到根目录下面改成：
+
+// 应用目录
+define('APP_PATH', __DIR__.'/apps/');
+// 加载框架引导文件
+require './thinkphp/start.php';
+注意：APP_PATH的定义支持相对路径和绝对路径，但必须以“/”结束
+
+如果你调整了框架核心目录的位置或者目录名，只需要这样修改：
+
+// 改变应用目录的名称
+define('APP_PATH', __DIR__.'/apps/');
+// 加载框架引导文件
+require './think/start.php';
+这样最终的应用目录结构如下：
 
 www  WEB部署目录（或者子目录）
 ├─index.php       应用入口文件
