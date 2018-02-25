@@ -1,6 +1,22 @@
 ThinkPHP 5.0
 ===============
 
+* 部署到服务器方法
+```
+部署虚拟主机：
+https://www.kancloud.cn/manual/thinkphp5/129746
+
+1.修改入口文件
+
+
+www  WEB部署目录（或者子目录）
+├─index.php       应用入口文件
+├─application     应用目录
+├─public          静态资源目录
+├─runtime         缓存目录
+└─thinkphp        框架目录
+```
+
 [![Total Downloads](https://poser.pugx.org/topthink/think/downloads)](https://packagist.org/packages/topthink/think)
 [![Latest Stable Version](https://poser.pugx.org/topthink/think/v/stable)](https://packagist.org/packages/topthink/think)
 [![Latest Unstable Version](https://poser.pugx.org/topthink/think/v/unstable)](https://packagist.org/packages/topthink/think)
