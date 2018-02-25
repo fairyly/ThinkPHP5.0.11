@@ -1,0 +1,15 @@
+{include file="index/header" /}
+<div class="contain">
+    <div class="img-wrap">
+        <img src="{$userinfo[0]['photo']}" alt="" class="userphoto">
+    </div>
+    <form enctype="multipart/form-data" action="{:Url('/updatephote',['id'=>$userinfo[0]['userid']])}" class="upload-photo" method="post">
+        <div class="upload-wrap">
+            <button class="modify-photo modify-photobtn">点击上传头像</button>
+            <input class="file-input" type="file" name="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg,image/webp"/>
+        </div>
+        <button class="modify-photo" type="submit">修改头像</button>
+    </form>
+</div>
+
+{include file="index/footer" /}

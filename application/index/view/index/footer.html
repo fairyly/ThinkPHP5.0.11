@@ -1,0 +1,45 @@
+
+    <div class="foot">
+    <ul>
+        <li class="<?php echo $type == 'index'?'active':''; ?>">
+            <a href="{:Url('/')}">
+                    <span class="am-icon-home am-icon-sm"></span>
+                    <p>用户</p>
+                </a>
+        </li>
+        <li class="<?php echo $type == 'ourinfo'?'active':''; ?>">
+            <a href="{:Url('/ourinfo')}">
+                    <span class="am-icon-send am-icon-sm"></span>
+                    <p>简介</p>
+                </a>
+        </li>
+        <li class="<?php echo $type == 'about'?'active':'';?>">
+            <a href="{:Url('/about')}">
+                    <span class="am-icon-trophy am-icon-sm"></span>
+                    <p>关于</p>
+                </a>
+        </li>
+        <li class="<?php echo $type == 'usercenter'|| $type =='login' 
+            || $type =='register' ?'active':''; ?>">
+            <a href="{:Url('/usercenter')}">
+                    <span class="am-icon-user am-icon-sm"></span>
+                    <p>我</p>
+                </a>
+        </li>
+    </ul>
+</div>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/static/index/js/jquery-3.2.1.js"></script>
+<script src="/static/index/js/base.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/static/index/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="/static/index/js/amazeui.min.js"></script>
+
+</body>
+</html>

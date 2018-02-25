@@ -1,0 +1,31 @@
+{include file="index/header" /}
+<div class="contain login">
+
+    <header >
+        <div class="a-bar">
+            <a href="javascript:history.back()" class="a-back">
+                <i class="am-icon-sm am-icon-angle-left"></i>
+                返回
+            </a>
+            <div class="a-name">
+                注册
+            </div>
+            <div class="a-right">
+                <a href="{:Url('/login')}" class="btn">
+                    登录
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="login-logo"><img src="/static/index/images/logo.png" alt=""></div>
+    <form action="{:Url('index/index/registerForm')}" method="post" class="login-form">
+        <div><input type="text" name="uname" value="" placeholder="用户名"></div>
+        <div><input type="password" name="upass" value="" placeholder="请输入密码"></div>
+        <div><input type="email" name="uemail" value="" placeholder="邮箱"></div>
+        <div><input type="number" name="uphone" value="" placeholder="手机号"></div>
+        <div><button type="submit">免费注册</button></div>
+    </form>
+
+</div>
+
+{include file="index/footer" /}

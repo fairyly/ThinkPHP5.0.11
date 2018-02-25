@@ -1,0 +1,118 @@
+{include file="index/header" /}
+<div class="contain">
+    <div class="usercenter">
+        <form action="{:Url('/userupdate',['id'=>$userinfo[0]['userid']])}"  method="post" class="update-form">
+           <div class="block block-list list-vertical">
+                <a class="block-item link clearfix ico-membercard" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-envelope"></span>
+                    <p class="title-info c-black font-size-14 have-new-card">
+                        我的邮箱
+                    </p>
+                    <input type="email" name="useremail" value="{$userinfo[0]['useremail']}"/>
+                </a>
+                <a class="block-item link clearfix ico-giftcard" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-phone"></span>
+                    <p class="title-inf o c-black font-size-14 have-new-card">我的手机号
+                    </p>
+                    <input type="number" name="telephone" maxlength="30" value="{$userinfo[0]['telephone']}"/>
+                </a>
+                <!-- <a class="block-item link clearfix ico-pointsstore" href="" target="_blank">
+                    <span class="am-icon-sm am-icon-camera"></span>
+                    <p class="title-info c-black font-size-14 myphotos">我的照片</p>
+                    <i> > </i> 
+                </a> -->
+                <a class="block-item link clearfix ico-pointsstore" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-hourglass"></span>
+                    <p class="title-info c-black font-size-14">年龄</p>
+                    <input type="number" name="age" maxlength="30" value="{$userinfo[0]['age']}"/>
+                </a>
+                <a class="block-item link clearfix ico-gift" href="javascript:void(0);" target="_blank" style="display:{$userinfo[0]['sex']? 'none':'block'}">
+                    <span class="am-icon-sm am-icon-tag"></span>
+                    <p class="title-info c-black font-size-14">性别</p>
+                    <select name="sex">
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                    </select>
+                </a>
+                <a class="block-item link clearfix ico-coupon" href="javascript:void(0);" target="_blank" style="display:{$userinfo[0]['graduate']? 'none':'block'}">
+                    <span class="am-icon-sm am-icon-github-alt"></span>
+                    <p class="title-info c-black font-size-14">学历</p>
+                    <select name="graduate">
+                        <option value="博士">博士</option>
+                        <option value="硕士">硕士</option>
+                        <option value="本科">本科</option>
+                        <option value="大专">大专</option>
+                        <option value="高中">高中</option>
+                    </select>
+                </a>
+                <a class="block-item link clearfix ico-promocode" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-calendar"></span>
+                    <p class="title-info c-black font-size-14">生日</p>
+                    <input type="date" name="birthday" value="{$userinfo[0]['birthday']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-text-height"></span>
+                    <p class="title-info c-black font-size-14">
+                        身高
+                    </p>
+                    <input type="number" name="tall" maxlength="30" value="{$userinfo[0]['tall']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-balance-scale"></span>
+                    <p class="title-info c-black font-size-14">
+                        体重
+                    </p>
+                    <input type="number" name="weight" maxlength="30" value="{$userinfo[0]['weight']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-map-marker"></span>
+                    <p class="title-info c-black font-size-14">
+                        家乡
+                    </p>
+                    <input type="text" name="city" maxlength="30" value="{$userinfo[0]['city']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-qq"></span>
+                    <p class="title-info c-black font-size-14">
+                        QQ
+                    </p>
+                    <input type="number" name="QQ" maxlength="30" value="{$userinfo[0]['QQ']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-weixin"></span>
+                    <p class="title-info c-black font-size-14">
+                        微信
+                    </p>
+                     <input type="text" name="weixin" maxlength="30" value="{$userinfo[0]['weixin']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-weibo"></span>
+                    <p class="title-info c-black font-size-14">
+                        微博
+                    </p>
+                     <input type="text" maxlength="30" name="weibo" value="{$userinfo[0]['weibo']}"/>
+                </a>
+                <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                    <span class="am-icon-sm am-icon-edit"></span>
+                    <p class="title-info c-black font-size-14 mydescription">
+                        简介
+                    </p>
+                    
+                </a>
+                <div class="info-add">
+                    <textarea rows="4" placeholder="请在此处介绍自己..." name="baseinfo" maxlength="200">{$userinfo[0]['baseinfo']}</textarea>
+                </div>
+                <div class="usercenter-info">
+                    <button class="submit-button" type="submit">保存</button>
+                </div>
+            </div>
+        </form>
+        <div class="usercenter-info">
+            <button class="submit-btn">保存</button>
+        </div>
+    </div>
+</div>
+<div class="mask">
+    <div class="error-info">输入框不能为空</div>
+</div>
+{include file="index/footer" /}

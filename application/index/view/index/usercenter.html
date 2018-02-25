@@ -1,0 +1,113 @@
+{include file="index/header" /}
+<div class="contain">
+	<div class="usercenter">
+        <div class="centertop">
+            <div class="headphoto">
+                <a href="{:Url('/uploadphote',['id'=>$userinfo[0]['userid']])}">
+                    <img src="{$userinfo[0]['photo']}" alt="photo"/>
+                </a>
+                <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg,image/webp" capture="camera" style="display: none;"/>
+            </div>
+            <div class="username">
+                <span class="am-icon-sm am-icon-{$userinfo[0]['sex'] == 0? 'male':'female'}"></span> <span> {$userinfo[0]['username']} </span>
+            </div>
+        </div>
+       
+        <div class="block block-list list-vertical">
+            <a class="block-item link clearfix ico-membercard" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-envelope"></span>
+                <p class="title-info c-black font-size-14 have-new-card">
+                    我的邮箱
+                </p>
+                <i>{$userinfo[0]['useremail']}</i>
+            </a>
+            <a class="block-item link clearfix ico-giftcard" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-phone"></span>
+                <p class="title-inf o c-black font-size-14 have-new-card">我的手机号
+                </p>
+                <i>{$userinfo[0]['telephone']}</i>
+            </a>
+            <a class="block-item link clearfix ico-pointsstore" href="{:Url('/uploadphote',['id'=>$userinfo[0]['userid']])}" >
+                <span class="am-icon-sm am-icon-camera"></span>
+                <p class="title-info c-black font-size-14 myphotos">我的照片</p>
+                <i>  </i>
+            </a>
+            <a class="block-item link clearfix ico-pointsstore" href="javascript:void(0);">
+                <span class="am-icon-sm am-icon-hourglass"></span>
+                <p class="title-info c-black font-size-14">我的年龄</p>
+                <i>{$userinfo[0]['age']}</i>
+            </a>
+            <a class="block-item link clearfix ico-gift" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-tag"></span>
+                <p class="title-info c-black font-size-14">性别</p>
+                <i>{$userinfo[0]['sex']==0? '男':'女'}</i>
+            </a>
+            <a class="block-item link clearfix ico-coupon" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-github-alt"></span>
+                <p class="title-info c-black font-size-14">我的学历</p>
+                <i>{$userinfo[0]['graduate']}</i>
+            </a>
+            <a class="block-item link clearfix ico-promocode" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-calendar"></span>
+                <p class="title-info c-black font-size-14">我的生日</p>
+                <i>{$userinfo[0]['birthday']}</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-text-height"></span>
+                <p class="title-info c-black font-size-14">
+                    我的身高
+                </p>
+                <i>{$userinfo[0]['tall']} cm</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-balance-scale"></span>
+                <p class="title-info c-black font-size-14">
+                    我的体重
+                </p>
+                <i>{$userinfo[0]['weight']} kg</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-map-marker"></span>
+                <p class="title-info c-black font-size-14">
+                    我的家乡
+                </p>
+                <i>{$userinfo[0]['city']}</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-qq"></span>
+                <p class="title-info c-black font-size-14">
+                    QQ
+                </p>
+                <i>{$userinfo[0]['QQ']}</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-weixin"></span>
+                <p class="title-info c-black font-size-14">
+                    微信
+                </p>
+                <i>{$userinfo[0]['weixin']}</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-weibo"></span>
+                <p class="title-info c-black font-size-14">
+                    微博
+                </p>
+                <i>{$userinfo[0]['weibo']}</i>
+            </a>
+            <a class="block-item link clearfix ico-present" href="javascript:void(0);" target="_blank">
+                <span class="am-icon-sm am-icon-edit"></span>
+                <p class="title-info c-black font-size-14 mydescription">
+                    简介:
+                </p>
+                <!-- <i></i> -->
+                <div class="user-baseinfo">{$userinfo[0]['baseinfo']}</div>
+            </a>
+            <div class="usercenter-info update-info">
+                <a href="{:Url('/userdetail',['id'=>$userinfo[0]['userid']])}">更新资料</a>
+            </div>
+            <div class="usercenter-info">免费！！！免费！！！免费！！！将免费进行到底，不收一分钱，不搞会员费！
+            </div>
+        </div>
+    </div>
+</div>
+{include file="index/footer" /}
